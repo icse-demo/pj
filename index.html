@@ -1844,22 +1844,32 @@
                                     <div class="input"><input name="pricing_plan" class="hs-input" type="hidden" value="Standard"></div>
                                 </div>
                 <div class="contractdiv" id="contracts"></div>
+            
+
+    
 
 <!-- Ironclad Clickwrap -->
 
 <script type="text/javascript">
 var custom_data = {};
+var render_data = {};
 
 $(".custom-data").change(function(){
 console.log(this.id);
+console.log(this);
 custom_data[this.id] = this.value;
+render_data[this.id] = this.value;
 
 _ps('set', 'custom_data', custom_data );
+_ps("embedded-fpu4kzc12:retrieveHTML", render_data);
 });
 
 _ps("create", "7941d38d-0ebe-4d61-a55b-3fd7ab6def0c" );
 
 _ps("load", "embedded-zrevumxjb", {signer_id_selector: "email", container_selector: "contracts" } );
+
+_ps("load", "embedded-fpu4kzc12", {signer_id_selector: "email", container_selector: "contracts1" } );
+_ps('set', 'snapshot_location', 'location-dre2btdyu');
 
 </script>
 
@@ -2153,6 +2163,16 @@ font: 16px 'Proxima', Arial, Helvetica, sans-serif;
                 <div class="row top-12 top-md-10 top-lg-12"></div>
             </div>
         </section>
+        <div class="contractexample" id="contracts1"></div>
+
+        <style type="text/css">
+            
+            #ps-group-embedded-fpu4kzc12 {
+                max-width: 1000px !important;
+                text-align: center !important;
+                padding-left: 200px !important;
+            }
+        </style>
         <footer class="footer">
             <div class="inner">
                 <svg viewBox="0 0 147 35" width="147" height="35">
